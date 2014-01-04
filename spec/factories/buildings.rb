@@ -2,11 +2,11 @@
 
 FactoryGirl.define do
   factory :building do
-    street_address "MyString"
-    city "MyString"
+    street_address "1 No Way"
+    city "Miami"
     state_id 1
-    postal_code "MyString"
-    description "MyText"
+    postal_code "11011"
+    description "This building is not well kept."
     owner_id 1
   end
 end
