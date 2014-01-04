@@ -1,0 +1,11 @@
+<h1>Owners Index</h1>
+
+<% owners.each do |owner| %>
+  <div>
+    <p>Name: <%= owner.first_name %> <%= owner.last_name %></p>
+    <p>Email: <%= owner.email %></p>
+    <p>Company: <%= owner.company %></p>
+  </div>
+<% end %>
+
+<%= link_to 'Create Owner', new_owner_path %>
