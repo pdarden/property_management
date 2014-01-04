@@ -1,0 +1,10 @@
+<h1>Creating New Building</h1>
+
+<%= simple_form_for(@building, html: { class: 'form-vertical' }) do |f| %>
+  <%=f.input :street_address, label: "Street Address", autofocus: true %>
+  <%=f.input :city %>
+  <%=f.association :state, collection: State.all %>
+  <%= f.input :postal_code, label: "Zip Code" %>
+  <%= f.input :description %>
+  <%= f.submit "Add Building" %>
+<% end %>

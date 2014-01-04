@@ -1,0 +1,14 @@
+<h1>Buildings Index</h1>
+
+<% buildings.each do |building| %>
+  <div>
+    <p>Street Address: <%= building.street_address %></p><br>
+    <p>City: <%= building.city %></p><br>
+    <p>State: <%= building.state_name %></p><br>
+    <p>Postal Code: <%= building.postal_code %></p><br>
+    <p>Description: <%= building.description %></p><br>
+    <p>Owner: <%= building.owner_name %></p>
+  </div>
+<% end %>
+
+<%= link_to 'Create Building', new_building_path %>

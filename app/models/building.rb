@@ -12,4 +12,16 @@ class Building < ActiveRecord::Base
 
   belongs_to :owner,
     inverse_of: :bulidings
+
+  def owner_name
+    if !self.owner_id.blank?
+      Owner.find(self.owner_id).first_name + ' ' + Owner.find(self.owner_id).last_name
+    else
+      nil
+    end
+  end
+
+  def state_name
+    State.find(self.state_id).name
+  end
 end
