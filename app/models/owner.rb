@@ -6,4 +6,5 @@ class Owner < ActiveRecord::Base
   has_many :buildings,
     inverse_of: :owner,
     dependent: :nullify
+
 end

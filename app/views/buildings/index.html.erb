@@ -8,6 +8,7 @@
     <p>Postal Code: <%= building.postal_code %></p>
     <p>Description: <%= building.description %></p>
     <p>Owner: <%= building.owner_name %></p>
+    <p><%= link_to 'Show', building %> <%= link_to 'Edit', edit_owner_path(building) %> <%= link_to 'Delete', building, mehtod: :delete, data: { confirm: 'Are you sure?' } %></p>
   </div>
 <% end %>
 

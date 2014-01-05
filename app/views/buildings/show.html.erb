@@ -1,0 +1,10 @@
+<h1>Building Information</h1>
+
+<p><strong>Street Address:</strong> <%= @building.street_address %></p>
+<p><strong>City:</strong> <%= @building.city %></p>
+<p><strong>State:</strong> <%= @building.state_name %></p>
+<p><strong>Postal Code:</strong> <%= @building.postal_code %></p>
+<p><strong>Description:</strong> <%= @building.description %></p>
+<p><strong>Owner:</strong> <%= @building.owner_name %></p>
+
+<%= link_to 'Edit', edit_building_path(@building) %> | <%= link_to 'All Buildings', buildings_path %>

@@ -27,6 +27,23 @@ class BuildingsController < ApplicationController
     end
   end
 
+  def update
+    @building = Building.find(building_params)
+
+    if @building.update(building_params)
+      redirect_to buildings_path,
+        notice: 'Building updated successfully!'
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    Building.find(params[:id]).destroy
+    redirect_to buildings_path,
+      notice: "Building was successfully deleted!"
+  end
+
   private
   def buildings
     @buildings ||= Building.all
