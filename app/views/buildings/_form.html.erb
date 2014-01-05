@@ -4,5 +4,7 @@
   <%=f.association :state, collection: State.all %>
   <%= f.input :postal_code, label: "Zip Code" %>
   <%= f.input :description %>
+  <%= f.association :owner, label_method: lambda { |owner| "#{owner.first_name} #{owner.last_name}" }, value_method: :id%>
+  <p>Can't find owner? <%= link_to 'Add Owner', new_owner_path %></p>
   <%= f.submit "Add Building" %>
 <% end %>

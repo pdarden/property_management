@@ -5,6 +5,7 @@
     <p>Name: <%= owner.first_name %> <%= owner.last_name %></p>
     <p>Email: <%= owner.email %></p>
     <p>Company: <%= owner.company %></p>
+    <p><%= link_to 'Show', owner %> <%= link_to 'Edit', edit_owner_path(owner) %> <%= link_to 'Delete', owner, method: :delete, data: { confirm: 'Are you sure?' } %></p>
   </div>
 <% end %>
 

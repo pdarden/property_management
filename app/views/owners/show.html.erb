@@ -1,0 +1,8 @@
+<h1>Owner Information</h1>
+
+<p><strong>First Name:</strong> <%= @owner.first_name %></p>
+<p><strong>Last Name:</strong> <%= @owner.last_name %></p>
+<p><strong>Email:</strong> <%= @owner.email %></p>
+<p><strong>Company:</strong> <%= @owner.company %></p>
+
+<%= link_to 'Edit', edit_owner_path(@owner) %> | <%= link_to 'All Owners', owners_path %>
